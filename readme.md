@@ -57,3 +57,38 @@ Quick ones:
 curl -X POST http://localhost:8000/user -H "Content-Type: application/json" -d '{"name":"Favour"}'
 
 -- try..catch is not limited to async code, it works anytime you want to catch synchronous errors like parsinf a json
+
+-- findIndex is an array method in JavaScript. It goes through each element of the array and returns the index of the first element that matches a condition you provide.
+
+The index (0-based) of the first element that satisfies the condition.
+-1 if no element matches.
+
+const index = array.findIndex(element => condition);
+-- const users = [
+  { id: 101, name: "Favour" },
+  { id: 102, name: "Evans" }
+];
+
+// Find index of user with id 102
+const index = users.findIndex(user => user.id === 102);
+
+console.log(index); // 1
+console.log(users[index]); // { id: 102, name: "Evans" }
+
+
+URL Modules is a module that helps you parse and work with URLs in a sturctured way, it gives you properties and methods to handle everything about urls easily
+
+First you import
+
+import { URL } from "url";
+
+Next you create a URL object
+
+const urlObj = new URL (req.url, `http://${req.headers.host});
+
+req.url → the path and query part from the incoming request (like /users?id=123).
+req.headers.host → the host (like localhost:8000) so Node knows the full absolute URL.
+new URL() → creates a URL object with properties like .pathname and .searchParams.
+
+To access query parameters we use searchParams which is an instance of URLSearchParams, .get retrieves the value of the query parameter
+const id = reqUrl.searchParams.get("id");
