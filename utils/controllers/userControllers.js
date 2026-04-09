@@ -1,6 +1,6 @@
 // controllers/userController.js
 
-import { sendJson, parseJsonBody } from "../utils/helpers.js";
+import { sendJson, parseJsonBody } from "../utils/helper.js";
 
 export let users = [
   { id: 101, name: "Favour" },
