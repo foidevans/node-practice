@@ -1,7 +1,7 @@
 import http from 'http';
 import { handleRoutes } from './routes.js';
 
-const PORT =  8000;
+const PORT =  9000;
 
 const server = http.createServer((req, res) => {
     handleRoutes(req, res);
